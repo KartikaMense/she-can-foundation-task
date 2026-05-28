@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>She Can Foundation</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#f5f5f5;
+    }
+
+    header{
+      background:#ff5a36;
+      color:white;
+      padding:30px 8%;
+    }
+
+    .header-content{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo h1{
+      font-size:48px;
+      margin-bottom:8px;
+    }
+
+    .logo p{
+      font-size:18px;
+    }
+
+    .nav{
+      position:relative;
+    }
+
+    .dropbtn{
+      background:none;
+      border:none;
+      color:white;
+      font-size:20px;
+      cursor:pointer;
+      font-weight:bold;
+    }
+
+    .dropdown-content{
+      display:none;
+      position:absolute;
+      right:0;
+      top:40px;
+      background:white;
+      min-width:220px;
+      box-shadow:0px 4px 12px rgba(0,0,0,0.2);
+      border-radius:8px;
+      overflow:hidden;
+      z-index:1;
+    }
+
+    .dropdown-content a{
+      display:block;
+      padding:14px 18px;
+      text-decoration:none;
+      color:#333;
+      font-size:17px;
+    }
+
+    .dropdown-content a:hover{
+      background:#f2f2f2;
+    }
+
+    .show{
+      display:block;
+    }
+
+    .main-section{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:60px;
+      padding:70px 8%;
+      background:white;
+    }
+
+    .content{
+      width:50%;
+    }
+
+    .content h2{
+      font-size:55px;
+      color:#222;
+      margin-bottom:25px;
+    }
+
+    .content p{
+      font-size:22px;
+      line-height:1.8;
+      color:#444;
+      margin-bottom:35px;
+    }
+
+    .join-btn{
+      background:#ff5a36;
+      color:white;
+      border:none;
+      padding:15px 35px;
+      font-size:20px;
+      border-radius:8px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .join-btn:hover{
+      background:#e64926;
+      transform:scale(1.05);
+    }
+
+    .image-box{
+      width:50%;
+    }
+
+    .image-box img{
+      width:100%;
+      border-radius:14px;
+      box-shadow:0px 4px 15px rgba(0,0,0,0.2);
+    }
+
+    footer{
+      background:#222;
+      color:white;
+      text-align:center;
+      padding:18px;
+      font-size:18px;
+    }
+
+    @media(max-width:768px){
+
+      .header-content{
+        flex-direction:column;
+        gap:20px;
+        text-align:center;
+      }
+
+      .main-section{
+        flex-direction:column;
+        padding:40px 5%;
+      }
+
+      .content{
+        width:100%;
+      }
+
+      .image-box{
+        width:100%;
+      }
+
+      .logo h1{
+        font-size:38px;
+      }
+
+      .content h2{
+        font-size:40px;
+      }
+
+      .content p{
+        font-size:18px;
+      }
+
+      .join-btn{
+        width:100%;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <div class="header-content">
+
+      <div class="logo">
+        <h1>She Can Foundation</h1>
+        <p>Empowering Women Through Education & Opportunities</p>
+      </div>
+
+      <div class="nav">
+
+        <button onclick="toggleMenu()" class="dropbtn">
+          About Us ▼
+        </button>
+
+        <div id="menu" class="dropdown-content">
+          <a href="#">Our Mission</a>
+          <a href="#">Our Impact</a>
+          <a href="#">Women Empowerment</a>
+          <a href="#">Our Team</a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <section class="main-section">
+
+    <div class="content">
+
+      <h2>Empowering Women</h2>
+
+      <p>
+        She Can Foundation is a non-profit organization dedicated to supporting
+        women and young girls by providing education, skill development, and
+        career opportunities. Our mission is to inspire confidence,
+        independence, and growth in every individual.
+      </p>
+
+      <button class="join-btn" onclick="showMessage()">
+        Join Our Mission
+      </button>
+
+    </div>
+
+    <div class="image-box">
+
+      <img src="https://shecan.global/shecan/wp-content/uploads/2023/01/Appeal-5-1-1536x989.png">
+
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 She Can Foundation | All Rights Reserved
+  </footer>
+
+  <script>
+
+    function showMessage(){
+      alert("Thank you for supporting She Can Foundation!");
+    }
+
+    function toggleMenu(){
+      document.getElementById("menu").classList.toggle("show");
+    }
+
+  </script>
+
+</body>
+
+</html>
